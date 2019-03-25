@@ -11,10 +11,6 @@ import org.springframework.context.annotation.Bean
 import org.springframework.context.annotation.Configuration
 import org.springframework.core.io.ClassPathResource
 import org.springframework.oxm.jaxb.Jaxb2Marshaller
-import org.springframework.oxm.xstream.XStreamMarshaller
-import java.util.HashMap
-
-
 
 
 @Configuration
@@ -31,7 +27,7 @@ class Configuration {
     fun xmlFileItemReader(): ItemReader<Certificate> {
 
         val xmlFileReader = StaxEventItemReader<Certificate>()
-        xmlFileReader.setResource(ClassPathResource("user.xml"))
+        xmlFileReader.setResource(ClassPathResource("user1.xml"))
         xmlFileReader.setFragmentRootElementName("HGZXX")
 
         val unmarshaller = Jaxb2Marshaller()

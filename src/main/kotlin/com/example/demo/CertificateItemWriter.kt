@@ -9,8 +9,6 @@ class CertificateItemWriter : ItemWriter<Certificate> {
     lateinit var a:CertificateRepository
 
     override fun write(items: List<Certificate>) {
-        println("!!!!!!!!!!!!!!!!!!!!!!!!!!!!")
-
         for(i in items){
             println(i.toString())
         }

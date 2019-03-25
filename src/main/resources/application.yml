@@ -5,6 +5,8 @@ spring:
     password: 123
   batch:
     initialize-schema: always
+    job:
+      enabled: false
 
   jpa:
     properties:
@@ -12,3 +14,5 @@ spring:
         jdbc:
           lob:
             non_contextual_creation: true
+server:
+  port: 8787

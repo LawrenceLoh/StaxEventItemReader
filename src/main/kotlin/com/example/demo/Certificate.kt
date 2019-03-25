@@ -79,5 +79,9 @@ class Certificate {
     @XmlElement(name = "WC0051")
     var remark: String = ""
 
+    override fun toString(): String {
+        return "Certificate(id=$id, certificateNo='$certificateNo', dateOfIssue='$dateOfIssue', vehicleManufacturer='$vehicleManufacturer', vehicleBrand='$vehicleBrand', vehicleName='$vehicleName', vehicleModel='$vehicleModel', vehicleIdentificationNo='$vehicleIdentificationNo', engineModel='$engineModel', engineNumber='$engineNumber', fuelType='$fuelType', totalMass='$totalMass', curbQuality='$curbQuality', passengerNoAllowed='$passengerNoAllowed', highestDesignDpeed='$highestDesignDpeed', vehicleManufactureDate='$vehicleManufactureDate', remark='$remark')"
+    }
+
 
 }
