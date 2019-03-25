@@ -1,12 +1,15 @@
 package com.example.demo
 
 import javax.persistence.*
+import javax.xml.bind.annotation.XmlAccessType
+import javax.xml.bind.annotation.XmlAccessorType
 import javax.xml.bind.annotation.XmlElement
 import javax.xml.bind.annotation.XmlRootElement
 
 @Entity
 @Table(name = "certificate", schema= "nev")
-@XmlRootElement(name="person")
+@XmlRootElement(name="HGZXX")
+@XmlAccessorType(XmlAccessType.FIELD)
 class Certificate {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -75,10 +78,6 @@ class Certificate {
     @Column(name = "remark")
     @XmlElement(name = "WC0051")
     var remark: String = ""
-
-    override fun toString(): String {
-        return "Certificate( certificateNo='$certificateNo', dateOfIssue='$dateOfIssue', vehicleManufacturer='$vehicleManufacturer', vehicleBrand='$vehicleBrand', vehicleName='$vehicleName', vehicleModel='$vehicleModel', vehicleIdentificationNo='$vehicleIdentificationNo', engineModel='$engineModel', engineNumber='$engineNumber', fuelType='$fuelType', totalMass='$totalMass', curbQuality='$curbQuality', passengerNoAllowed='$passengerNoAllowed', highestDesignDpeed='$highestDesignDpeed', vehicleManufactureDate='$vehicleManufactureDate', remark='$remark')"
-    }
 
 
 }
