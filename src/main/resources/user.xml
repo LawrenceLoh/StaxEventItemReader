@@ -1,6 +1,5 @@
 <?xml version="1.0" encoding="gb2312"?>
-<persons>
-<person>
+<HGZXX>
     <CertificateNO>WAH005000000001</CertificateNO>
     <WC0004>2018年08月21日</WC0004>
     <WC0005>北京奔驰汽车有限公司</WC0005>
@@ -17,5 +16,4 @@
     <WC0049>215</WC0049>
     <WC0050>2018年01月10日</WC0050>
     <WC0051>发动机净功率为115kW。ABS系统生产厂:博世汽车部件(苏州)有限公司,型号:ESP Basis。</WC0051>
-</person>
-    </persons>
+</HGZXX>

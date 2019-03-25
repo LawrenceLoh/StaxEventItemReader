@@ -32,14 +32,11 @@ class Configuration {
 
         val xmlFileReader = StaxEventItemReader<Certificate>()
         xmlFileReader.setResource(ClassPathResource("user.xml"))
-        xmlFileReader.setFragmentRootElementName("person")
+        xmlFileReader.setFragmentRootElementName("HGZXX")
 
-        val aliasesMap = HashMap<String, String>()
-        aliasesMap["person"] = "com.example.demo.Certificate"
-        val marshaller = XStreamMarshaller()
-        marshaller.setAliases(aliasesMap)
-
-        xmlFileReader.setUnmarshaller(marshaller)
+        val unmarshaller = Jaxb2Marshaller()
+        unmarshaller.setClassesToBeBound(arrayOf(Certificate::class.java))
+        xmlFileReader.setUnmarshaller(unmarshaller)
 
         return xmlFileReader
     }
